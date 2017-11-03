@@ -2,7 +2,7 @@
   "name": "sige-rh",
   "version": "0.0.1",
   "private": true,
-  "description": "New Swagger API Project",
+  "description": "Sistemas Integrados de Gestão Empresarial (API Recursos Humanos)",
   "keywords": [],
   "author": "",
   "license": "",
@@ -10,7 +10,9 @@
   "dependencies": {
     "express": "^4.12.3",
     "firebase-admin": "^5.4.3",
-    "swagger-express-mw": "^0.1.0"
+    "swagger-express-mw": "^0.1.0",
+    "swagger-ui": "^3.4.2",
+    "yamljs": "^0.3.0"
   },
   "devDependencies": {
     "should": "^7.1.0",

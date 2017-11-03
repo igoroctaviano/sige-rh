@@ -1,0 +1,317 @@
+[
+  {
+    "guid": "ff3bd7c8-8623-4edc-ab83-39974c0fe3fd",
+    "isAllocated": true,
+    "salary": "$2,951.23",
+    "picture": "http://placehold.it/32x32",
+    "age": 20,
+    "specialty": "javascript",
+    "name": {
+      "first": "Sexton",
+      "last": "Combs"
+    },
+    "company": "ZILLAN",
+    "email": "sexton.combs@zillan.biz",
+    "phone": "+1 (874) 534-2267",
+    "address": "628 Alice Court, Genoa, North Dakota, 7581",
+    "about": "Excepteur veniam nulla veniam ad adipisicing mollit eiusmod id aliquip incididunt quis. Amet enim velit dolore est. Laborum cupidatat amet laboris et ex laborum.",
+    "registered": "Sunday, November 8, 2015 5:03 PM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "javascript",
+        "level": 3
+      },
+      {
+        "id": 1,
+        "name": "c#",
+        "level": 1
+      },
+      {
+        "id": 2,
+        "name": "java",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "guid": "0096bc3e-85c3-4cbc-981d-ec2cf0b5a1fd",
+    "isAllocated": false,
+    "salary": "$3,481.86",
+    "picture": "http://placehold.it/32x32",
+    "age": 35,
+    "specialty": "c#",
+    "name": {
+      "first": "Maria",
+      "last": "Wright"
+    },
+    "company": "VURBO",
+    "email": "maria.wright@vurbo.ca",
+    "phone": "+1 (803) 593-3404",
+    "address": "102 Troutman Street, Bodega, Virginia, 955",
+    "about": "Officia dolore excepteur ut aute aute sit proident eu esse amet consectetur. Aliquip ut laboris enim et nulla culpa qui nisi ipsum dolore occaecat laboris dolore eu. Laboris ut commodo voluptate amet occaecat dolor ipsum amet est voluptate duis ad laborum.",
+    "registered": "Monday, October 26, 2015 12:10 PM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "javascript",
+        "level": 1
+      },
+      {
+        "id": 1,
+        "name": "rails",
+        "level": 2
+      },
+      {
+        "id": 2,
+        "name": "c#",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "guid": "0381921b-e31d-4ac6-9e52-b54625166f0c",
+    "isAllocated": false,
+    "salary": "$2,293.47",
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "specialty": "javascript",
+    "name": {
+      "first": "Clara",
+      "last": "Glass"
+    },
+    "company": "SUSTENZA",
+    "email": "clara.glass@sustenza.name",
+    "phone": "+1 (977) 554-3185",
+    "address": "492 Battery Avenue, Veguita, Montana, 7045",
+    "about": "Do officia labore tempor sint officia quis enim. Occaecat consectetur qui ullamco sunt officia nisi officia occaecat incididunt consequat cupidatat ut. Aute deserunt velit ut sint incididunt fugiat est pariatur. Minim consequat eiusmod nisi officia adipisicing proident commodo id incididunt magna ex dolor adipisicing ipsum. Eiusmod eiusmod nulla esse id occaecat excepteur eu mollit. Do incididunt pariatur irure id adipisicing pariatur sit minim sunt sint.",
+    "registered": "Monday, August 14, 2017 12:06 AM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "c#",
+        "level": 2
+      },
+      {
+        "id": 1,
+        "name": "rails",
+        "level": 2
+      },
+      {
+        "id": 2,
+        "name": "rails",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "guid": "f58c824e-8423-4f33-a1b1-6aff68f9da2a",
+    "isAllocated": true,
+    "salary": "$2,440.78",
+    "picture": "http://placehold.it/32x32",
+    "age": 37,
+    "specialty": "c#",
+    "name": {
+      "first": "Harvey",
+      "last": "Vinson"
+    },
+    "company": "ONTAGENE",
+    "email": "harvey.vinson@ontagene.me",
+    "phone": "+1 (937) 554-2834",
+    "address": "358 Kensington Street, Gadsden, New Mexico, 8136",
+    "about": "Eu sint ullamco irure quis ex dolore non. Qui duis pariatur nulla ut veniam fugiat commodo exercitation ipsum. Consequat occaecat dolor qui nulla veniam cupidatat fugiat. Ea ad in adipisicing quis laborum consequat laboris sit laborum nulla ea reprehenderit.",
+    "registered": "Thursday, September 17, 2015 3:13 PM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "c#",
+        "level": 1
+      },
+      {
+        "id": 1,
+        "name": "c#",
+        "level": 2
+      },
+      {
+        "id": 2,
+        "name": "c#",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "guid": "ff859790-4abe-4c91-806e-a5c9da9acfba",
+    "isAllocated": true,
+    "salary": "$3,335.77",
+    "picture": "http://placehold.it/32x32",
+    "age": 22,
+    "specialty": "javascript",
+    "name": {
+      "first": "Sallie",
+      "last": "Hahn"
+    },
+    "company": "UPLINX",
+    "email": "sallie.hahn@uplinx.us",
+    "phone": "+1 (831) 529-2595",
+    "address": "129 Caton Place, Cleary, South Dakota, 8639",
+    "about": "Ullamco anim sint mollit ipsum esse esse laboris aliqua deserunt. Ad proident consectetur labore deserunt aute elit sit aliqua enim aute tempor officia. Amet irure reprehenderit aliquip culpa incididunt tempor laborum duis est commodo occaecat sunt. Sunt est aute sint nostrud enim fugiat tempor. Officia adipisicing duis ullamco laborum irure. Deserunt qui reprehenderit dolor esse sit quis ex anim aute laborum non. Do enim sunt anim cillum deserunt.",
+    "registered": "Tuesday, August 26, 2014 9:03 AM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "java",
+        "level": 1
+      },
+      {
+        "id": 1,
+        "name": "java",
+        "level": 2
+      },
+      {
+        "id": 2,
+        "name": "c#",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "guid": "6e8ac4a6-d5fd-4e28-a8a0-43cff5e3269d",
+    "isAllocated": true,
+    "salary": "$2,235.64",
+    "picture": "http://placehold.it/32x32",
+    "age": 29,
+    "specialty": "c#",
+    "name": {
+      "first": "Tasha",
+      "last": "Webb"
+    },
+    "company": "ZILPHUR",
+    "email": "tasha.webb@zilphur.biz",
+    "phone": "+1 (943) 402-2536",
+    "address": "988 Hope Street, Clay, Louisiana, 2456",
+    "about": "Id aute occaecat voluptate adipisicing incididunt officia veniam in incididunt sit eiusmod pariatur. Commodo anim voluptate aliqua minim sit nostrud minim eu fugiat. Nulla ad magna anim officia exercitation veniam aliqua cillum id elit. Aliqua mollit minim voluptate ex esse fugiat minim veniam laboris cupidatat pariatur aute. Non incididunt elit dolor eu duis commodo labore commodo anim amet officia aliquip.",
+    "registered": "Tuesday, March 28, 2017 8:13 PM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "java",
+        "level": 3
+      },
+      {
+        "id": 1,
+        "name": "java",
+        "level": 3
+      },
+      {
+        "id": 2,
+        "name": "java",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "guid": "7b84a6cc-1e76-4ea8-b7ad-cab40e1ad5dc",
+    "isAllocated": false,
+    "salary": "$1,629.31",
+    "picture": "http://placehold.it/32x32",
+    "age": 20,
+    "specialty": "c#",
+    "name": {
+      "first": "Mcintyre",
+      "last": "Freeman"
+    },
+    "company": "ROCKYARD",
+    "email": "mcintyre.freeman@rockyard.net",
+    "phone": "+1 (816) 448-2058",
+    "address": "952 Logan Street, Gloucester, Illinois, 9511",
+    "about": "Do minim consequat nulla eiusmod ut eiusmod non. Sunt nisi sunt enim laboris consequat pariatur incididunt tempor esse eiusmod duis consequat non. Ea ullamco pariatur est sit et sit id ad nostrud sint et do. Qui ipsum laboris proident velit elit labore tempor cillum deserunt deserunt Lorem dolor nisi consectetur. Elit pariatur nostrud incididunt sit labore aliqua deserunt commodo dolore fugiat mollit adipisicing dolore. Quis consequat pariatur quis eu eu esse labore non duis.",
+    "registered": "Sunday, August 21, 2016 3:12 PM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "javascript",
+        "level": 3
+      },
+      {
+        "id": 1,
+        "name": "java",
+        "level": 3
+      },
+      {
+        "id": 2,
+        "name": "c#",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "guid": "4f60d67b-3f00-4a21-a35b-6b17012feca1",
+    "isAllocated": false,
+    "salary": "$2,096.82",
+    "picture": "http://placehold.it/32x32",
+    "age": 34,
+    "specialty": "java",
+    "name": {
+      "first": "Padilla",
+      "last": "Richard"
+    },
+    "company": "VORTEXACO",
+    "email": "padilla.richard@vortexaco.io",
+    "phone": "+1 (818) 592-2080",
+    "address": "572 Green Street, Murillo, Iowa, 7554",
+    "about": "Proident aute ipsum culpa fugiat amet ut eiusmod ipsum amet nostrud voluptate aliqua. Occaecat enim tempor eu occaecat elit excepteur consectetur dolor eiusmod incididunt magna non. Deserunt aliquip anim amet duis incididunt qui aute id voluptate culpa consectetur quis labore reprehenderit. Quis exercitation sint proident cupidatat qui est elit. Quis nisi veniam mollit elit laboris mollit ea esse ut enim qui officia ex non.",
+    "registered": "Monday, June 5, 2017 4:39 AM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "javascript",
+        "level": 2
+      },
+      {
+        "id": 1,
+        "name": "java",
+        "level": 2
+      },
+      {
+        "id": 2,
+        "name": "javascript",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "guid": "2d94fb56-16c9-401d-a092-5c3189abaa83",
+    "isAllocated": false,
+    "salary": "$1,749.18",
+    "picture": "http://placehold.it/32x32",
+    "age": 27,
+    "specialty": "c#",
+    "name": {
+      "first": "Bettye",
+      "last": "Berger"
+    },
+    "company": "TUBALUM",
+    "email": "bettye.berger@tubalum.org",
+    "phone": "+1 (932) 466-3707",
+    "address": "488 Joralemon Street, Smeltertown, Puerto Rico, 775",
+    "about": "Non duis laborum qui nisi. Sunt esse consectetur ullamco reprehenderit sit. Eu labore in sint et commodo aute nisi eu quis adipisicing enim excepteur voluptate magna. Veniam ut proident nostrud occaecat exercitation. In Lorem eu labore incididunt eiusmod amet magna culpa sint.",
+    "registered": "Tuesday, March 7, 2017 11:30 PM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "javascript",
+        "level": 1
+      },
+      {
+        "id": 1,
+        "name": "java",
+        "level": 3
+      },
+      {
+        "id": 2,
+        "name": "javascript",
+        "level": 3
+      }
+    ]
+  }
+]
