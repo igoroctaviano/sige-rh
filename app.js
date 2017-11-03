@@ -17,6 +17,9 @@ var config = {
 SwaggerTools.initializeMiddleware(swaggerDoc, function(middleware) {
   // Serve the Swagger documents and Swagger UI
   app.use(middleware.swaggerUi());
+  app.get('/', function(req, res) {
+    res.redirect('/docs');
+  });
 });
 
 SwaggerExpress.create(config, function(err, swaggerExpress) {
