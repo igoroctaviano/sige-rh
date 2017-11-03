@@ -22,7 +22,7 @@ firebase.initializeApp({
 var db = firebase.database();
 
 function refresh(callback) {
-  db.ref("/employee").push({}).then(function() {
+  db.ref("/employee").set(null).then(function() {
     data.forEach(function(employee, index) {
       db.ref("/employee/" + index).push(employee);
     });
@@ -37,8 +37,6 @@ function employees(callback) {
       employees = snapshot.val(); 
     }
 
-    console.log(employee);
-
     callback(employees);
   });
 }
@@ -50,8 +48,6 @@ function employee(id, callback) {
     if (snapshot.val()) { 
       employee = snapshot.val(); 
     }
-
-    console.log(employee);
 
     callback(employee);
   });
