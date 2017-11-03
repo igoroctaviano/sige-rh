@@ -136,7 +136,7 @@ definitions:
         skills:
           type: array
           description: The employee skills.
-          item:
+          items:
             type: object
             description: The employee skill.
             properties:
