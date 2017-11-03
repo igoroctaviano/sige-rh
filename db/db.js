@@ -22,12 +22,14 @@ firebase.initializeApp({
 var db = firebase.database();
 
 function refresh(callback) {
-  data.forEach(function(employee, callback) {
-    db.ref("/employee").push(employee).then(callback);
-  });
+  db.ref("/employee").push({}).then(function() {
+    data.forEach(function(employee, index) {
+      db.ref("/employee/" + index).push(employee);
+    });
+  }).then(callback);
 }
 
-function getEmployees(callback) {
+function employees(callback) {
   db.ref("/employee").on('value', function(snapshot) {
     var employees;
 
@@ -35,11 +37,28 @@ function getEmployees(callback) {
       employees = snapshot.val(); 
     }
 
+    console.log(employee);
+
     callback(employees);
+  });
+}
+
+function employee(id, callback) {
+  db.ref("/employee/" + id).on('value', function(snapshot) {
+    var employee;
+
+    if (snapshot.val()) { 
+      employee = snapshot.val(); 
+    }
+
+    console.log(employee);
+
+    callback(employee);
   });
 }
 
 module.exports = {
   refresh: refresh,
-  getEmployees: getEmployees
+  employees: employees,
+  employee: employee
 };

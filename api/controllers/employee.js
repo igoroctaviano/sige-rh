@@ -4,8 +4,8 @@ var util = require("util");
 var db = require("../../db/db");
 
 function employee(req, res) {
-  var employeeId = req.params.employeeId;
-  db.getEmployee(function(employeeId, employee) {
+  var id = req.swagger.params.id.value;
+  db.employee(id, function(employee) {
     res.json(employee);
   });
 }
