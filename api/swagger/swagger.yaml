@@ -21,6 +21,8 @@ paths:
   /employee/{id}:
     x-swagger-router-controller: employee
     get:
+      tags:
+        - employees
       description: Returns employee to the caller
       operationId: employee
       parameters:
@@ -41,6 +43,8 @@ paths:
   /employee:
     x-swagger-router-controller: employees
     get:
+      tags:
+        - employees
       description: Returns employees to the caller
       operationId: employees
       responses:
@@ -55,6 +59,8 @@ paths:
   /plan/{id}:
     x-swagger-router-controller: plan
     get:
+      tags:
+        - plans
       description: Returns plan to the caller
       operationId: plan
       parameters:
@@ -75,6 +81,8 @@ paths:
   /plan:
     x-swagger-router-controller: plans
     get:
+      tags:
+        - plans
       description: Returns contract plan to the caller
       operationId: plans
       responses:
@@ -90,6 +98,8 @@ paths:
     # binds a127 app logic to a route
     x-swagger-router-controller: hello_world
     get:
+      tags:
+        - tests
       description: Returns 'Hello' to the caller
       # used as the method name of the controller
       operationId: hello
