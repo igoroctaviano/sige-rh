@@ -147,7 +147,7 @@ definitions:
           type: string
           description: The employee picture.
         age:
-          type: string
+          type: integer
           description: The employee age.
         specialty:
           type: string
@@ -212,7 +212,7 @@ definitions:
         type: string
         description: The employee picture.
       age:
-        type: string
+        type: integer
         description: The employee age.
       specialty:
         type: string
@@ -269,7 +269,7 @@ definitions:
           type: integer
           description: The employee ID.
         contractType:
-          type: string
+          type: integer
           description: The contract type ID.
         guid:
           type: string
@@ -296,7 +296,7 @@ definitions:
         type: integer
         description: The employee ID.
       contractType:
-        type: string
+        type: integer
         description: The contract type ID.
       guid:
         type: string
