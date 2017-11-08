@@ -1,5 +1,7 @@
 var firebase = require("firebase-admin");
-const data = require('./data');
+
+const employeesData = require('./data/employee');
+const plansData = require('./data/plan');
 
 var serviceAccount = {
   "type": "service_account",
@@ -23,10 +25,16 @@ var db = firebase.database();
 
 function refresh(callback) {
   db.ref("/employee").set(null).then(function() {
-    data.forEach(function(employee, index) {
+    employeesData.forEach(function(employee, index) {
       db.ref("/employee/" + index).push(employee);
     });
-  }).then(callback);
+  }).then(function() {
+    db.ref("/plan").set(null).then(function() {
+      plansData.forEach(function(plan, index) {
+        db.ref("/plan/" + index).push(plan);
+      });
+    }).then(callback);
+  });
 }
 
 function employees(callback) {
@@ -53,8 +61,34 @@ function employee(id, callback) {
   });
 }
 
+function plans(callback) {
+  db.ref("/plan").on('value', function(snapshot) {
+    var plans;
+
+    if (snapshot.val()) { 
+      plans = snapshot.val(); 
+    }
+
+    callback(plans);
+  });
+}
+
+function plan(id, callback) {
+  db.ref("/plan/" + id).on('value', function(snapshot) {
+    var plan;
+
+    if (snapshot.val()) { 
+      plan = snapshot.val(); 
+    }
+
+    callback(plan);
+  });
+}
+
 module.exports = {
   refresh: refresh,
   employees: employees,
-  employee: employee
+  employee: employee,
+  plans: plans,
+  plan: plan
 };

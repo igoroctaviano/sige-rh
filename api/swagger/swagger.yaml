@@ -52,6 +52,40 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /plan/{id}:
+    x-swagger-router-controller: plan
+    get:
+      description: Returns plan to the caller
+      operationId: plan
+      parameters:
+        - in: path
+          name: id
+          type: integer
+          required: true
+          description: Numeric ID of the plan to get.
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/PlanResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /plan:
+    x-swagger-router-controller: plans
+    get:
+      description: Returns contract plan to the caller
+      operationId: plans
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/PlansResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /hello:
     # binds a127 app logic to a route
     x-swagger-router-controller: hello_world
@@ -197,7 +231,7 @@ definitions:
         description: The employee about.
       registered:
         type: string
-        description: The date when employee was registered.
+        description: The employee registration date.
       skills:
         type: array
         description: The employee skills.
@@ -214,6 +248,64 @@ definitions:
             level:
               type: integer
               description: The skill level.
+  PlansResponse:
+    type: array
+    description: The plans.  
+    items:
+      type: object
+      description: The plan.
+      properties:
+        employee:
+          type: integer
+          description: The employee ID.
+        contractType:
+          type: string
+          description: The contract type ID.
+        guid:
+          type: string
+          description: The plan guid.
+        isApproved:
+          type: boolean
+          description: The plan status.
+        salary:
+          type: string
+          description: The employee salary.
+        client:
+          type: string
+          description: The employee client.
+        details:
+          type: string
+          description: The plan details.
+        registered:
+          type: string
+          description: The plan registration date.
+  PlanResponse:
+    description: The contracting plan.
+    properties:
+      employee:
+        type: integer
+        description: The employee ID.
+      contractType:
+        type: string
+        description: The contract type ID.
+      guid:
+        type: string
+        description: The plan guid.
+      isApproved:
+        type: boolean
+        description: The plan status.
+      salary:
+        type: string
+        description: The employee salary.
+      client:
+        type: string
+        description: The employee client.
+      details:
+        type: string
+        description: The plan details.
+      registered:
+        type: string
+        description: The plan registration date.
   HelloWorldResponse:
     required:
       - message
