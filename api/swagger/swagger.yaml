@@ -125,7 +125,7 @@ paths:
 # complex objects have schema definitions
 definitions:
   EmployeesResponse:
-    type: object
+    type: array
     description: The employees.  
     items:
       type: object
@@ -253,7 +253,7 @@ definitions:
               type: integer
               description: The skill level.
   PlansResponse:
-    type: object
+    type: array
     description: The plans.  
     items:
       type: object

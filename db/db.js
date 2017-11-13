@@ -74,11 +74,14 @@ function employees(callback) {
       employees = snapshot.val(); 
     }
 
-    callback(employees);
+    callback(Object.keys(employees).map(key => employees[key]));
   });
 }
 
 function employee(id, callback) {
+
+
+
   db.ref("/employee/" + id).on('value', function(snapshot) {
     var employee;
 
@@ -98,7 +101,7 @@ function plans(callback) {
       plans = snapshot.val(); 
     }
 
-    callback(plans);
+    callback(Object.keys(plans).map(key => plans[key]));
   });
 }
 
