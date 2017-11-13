@@ -25,6 +25,35 @@ var db = firebase.database();
 
 function refresh(callback) {
   db.ref("/employee").set(null).then(function() {
+    employeesData.forEach(function(employee) {
+      var newEmployee = db.ref("/employee").push();
+      employee.uid = newEmployee.key;
+      newEmployee.set(employee);
+    });
+  }).then(function() {
+    db.ref("/plan").set(null).then(function() {
+      plansData.forEach(function(plan) {
+        var newPlan = db.ref("/plan").push();
+        plan.uid = newPlan.key;
+        newPlan.set(plan);
+      });
+    }).then(callback);
+  });
+}
+
+/*
+addCategory(category: any) {
+  var newRef = this.categories.push();
+  category.Id = newRef.key;
+  newRef.set(category).then( snap => {
+    this.openSnackBar('New category has been added', 'ok');
+  }).catch(error => {
+    this.openSnackBar(error.message, 'ok');
+  });
+}*/
+
+/*  function refresh(callback) {
+  db.ref("/employee").set(null).then(function() {
     employeesData.forEach(function(employee, index) {
       db.ref("/employee/" + index).push(employee);
     });
@@ -35,7 +64,7 @@ function refresh(callback) {
       });
     }).then(callback);
   });
-}
+} */
 
 function employees(callback) {
   db.ref("/employee").on('value', function(snapshot) {

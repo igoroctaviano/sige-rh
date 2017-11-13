@@ -1,31 +1,31 @@
 [
   {
-    "guid": "ff3bd7c8-8623-4edc-ab83-39974c0fe3fd",
+    "uid": "bc913f2f-3be3-45e0-8b42-fb4676ecd582",
     "isAllocated": true,
-    "salary": "$2,951.23",
+    "salary": "$3,114.80",
     "picture": "http://placehold.it/32x32",
-    "age": 20,
+    "age": 25,
     "specialty": "javascript",
     "name": {
-      "first": "Sexton",
-      "last": "Combs"
+      "first": "Aurelia",
+      "last": "Barber"
     },
-    "company": "ZILLAN",
-    "email": "sexton.combs@zillan.biz",
-    "phone": "+1 (874) 534-2267",
-    "address": "628 Alice Court, Genoa, North Dakota, 7581",
-    "about": "Excepteur veniam nulla veniam ad adipisicing mollit eiusmod id aliquip incididunt quis. Amet enim velit dolore est. Laborum cupidatat amet laboris et ex laborum.",
-    "registered": "Sunday, November 8, 2015 5:03 PM",
+    "company": "CODAX",
+    "email": "aurelia.barber@codax.me",
+    "phone": "+1 (937) 562-2270",
+    "address": "895 Fayette Street, Oasis, Arkansas, 157",
+    "about": "Sint ut deserunt consectetur mollit do excepteur aliqua minim consectetur. Aute aliquip sit deserunt proident anim minim aliqua fugiat eiusmod. Excepteur dolore occaecat amet elit consectetur ut ullamco eu laborum ipsum. Ut ipsum commodo voluptate amet quis do irure do esse ut aliqua aliquip ullamco laboris. Aute reprehenderit ipsum aute minim proident ad sunt.",
+    "registered": "Wednesday, September 2, 2015 3:42 AM",
     "skills": [
       {
         "id": 0,
-        "name": "javascript",
-        "level": 3
+        "name": "rails",
+        "level": 1
       },
       {
         "id": 1,
-        "name": "c#",
-        "level": 1
+        "name": "javascript",
+        "level": 3
       },
       {
         "id": 2,
@@ -35,267 +35,197 @@
     ]
   },
   {
-    "guid": "0096bc3e-85c3-4cbc-981d-ec2cf0b5a1fd",
-    "isAllocated": false,
-    "salary": "$3,481.86",
+    "uid": "790b3c45-c317-4b8d-a142-a40a7929ebdf",
+    "isAllocated": true,
+    "salary": "$2,081.19",
     "picture": "http://placehold.it/32x32",
-    "age": 35,
-    "specialty": "c#",
+    "age": 29,
+    "specialty": "java",
     "name": {
-      "first": "Maria",
-      "last": "Wright"
+      "first": "Francisca",
+      "last": "Mcdowell"
     },
-    "company": "VURBO",
-    "email": "maria.wright@vurbo.ca",
-    "phone": "+1 (803) 593-3404",
-    "address": "102 Troutman Street, Bodega, Virginia, 955",
-    "about": "Officia dolore excepteur ut aute aute sit proident eu esse amet consectetur. Aliquip ut laboris enim et nulla culpa qui nisi ipsum dolore occaecat laboris dolore eu. Laboris ut commodo voluptate amet occaecat dolor ipsum amet est voluptate duis ad laborum.",
-    "registered": "Monday, October 26, 2015 12:10 PM",
+    "company": "LUDAK",
+    "email": "francisca.mcdowell@ludak.co.uk",
+    "phone": "+1 (984) 535-2216",
+    "address": "100 Dare Court, Twilight, Missouri, 3241",
+    "about": "Aliqua elit magna tempor pariatur irure mollit consectetur exercitation labore nostrud eu eiusmod sunt adipisicing. Ad qui ad irure ut aliqua. Enim velit sint fugiat commodo ad amet. Ea fugiat consequat consequat voluptate. Et cupidatat ea fugiat laboris commodo magna.",
+    "registered": "Tuesday, May 30, 2017 12:12 AM",
     "skills": [
       {
         "id": 0,
-        "name": "javascript",
+        "name": "rails",
+        "level": 3
+      },
+      {
+        "id": 1,
+        "name": "c#",
         "level": 1
       },
       {
-        "id": 1,
-        "name": "rails",
-        "level": 2
-      },
-      {
         "id": 2,
-        "name": "c#",
-        "level": 3
+        "name": "rails",
+        "level": 1
       }
     ]
   },
   {
-    "guid": "0381921b-e31d-4ac6-9e52-b54625166f0c",
+    "uid": "e23a0def-42ab-4ee6-9ec6-b84d747d3e25",
     "isAllocated": false,
-    "salary": "$2,293.47",
+    "salary": "$1,200.08",
     "picture": "http://placehold.it/32x32",
-    "age": 32,
-    "specialty": "javascript",
+    "age": 29,
+    "specialty": "java",
     "name": {
-      "first": "Clara",
-      "last": "Glass"
+      "first": "Michelle",
+      "last": "Meyer"
     },
-    "company": "SUSTENZA",
-    "email": "clara.glass@sustenza.name",
-    "phone": "+1 (977) 554-3185",
-    "address": "492 Battery Avenue, Veguita, Montana, 7045",
-    "about": "Do officia labore tempor sint officia quis enim. Occaecat consectetur qui ullamco sunt officia nisi officia occaecat incididunt consequat cupidatat ut. Aute deserunt velit ut sint incididunt fugiat est pariatur. Minim consequat eiusmod nisi officia adipisicing proident commodo id incididunt magna ex dolor adipisicing ipsum. Eiusmod eiusmod nulla esse id occaecat excepteur eu mollit. Do incididunt pariatur irure id adipisicing pariatur sit minim sunt sint.",
-    "registered": "Monday, August 14, 2017 12:06 AM",
+    "company": "EVENTEX",
+    "email": "michelle.meyer@eventex.biz",
+    "phone": "+1 (898) 442-3217",
+    "address": "538 Livonia Avenue, Holcombe, Minnesota, 4921",
+    "about": "Reprehenderit reprehenderit ut ea sunt quis incididunt voluptate quis cillum ut nostrud est voluptate irure. Laborum consectetur fugiat aliquip anim culpa aute aute ipsum dolor qui aute minim. Nisi reprehenderit minim magna aute laboris commodo irure est nisi. Elit irure nostrud sunt in laboris Lorem id laborum velit exercitation. Sint id non ad dolore cillum eiusmod ad ipsum. Esse labore duis sint in ex amet.",
+    "registered": "Saturday, June 4, 2016 3:12 PM",
     "skills": [
       {
         "id": 0,
-        "name": "c#",
+        "name": "rails",
         "level": 2
       },
       {
         "id": 1,
-        "name": "rails",
-        "level": 2
+        "name": "java",
+        "level": 1
       },
       {
         "id": 2,
         "name": "rails",
-        "level": 2
+        "level": 1
       }
     ]
   },
   {
-    "guid": "f58c824e-8423-4f33-a1b1-6aff68f9da2a",
-    "isAllocated": true,
-    "salary": "$2,440.78",
+    "uid": "69455eb3-e12b-49b4-a901-1872d57bcb75",
+    "isAllocated": false,
+    "salary": "$2,496.47",
     "picture": "http://placehold.it/32x32",
     "age": 37,
     "specialty": "c#",
     "name": {
-      "first": "Harvey",
-      "last": "Vinson"
+      "first": "Brock",
+      "last": "Torres"
     },
-    "company": "ONTAGENE",
-    "email": "harvey.vinson@ontagene.me",
-    "phone": "+1 (937) 554-2834",
-    "address": "358 Kensington Street, Gadsden, New Mexico, 8136",
-    "about": "Eu sint ullamco irure quis ex dolore non. Qui duis pariatur nulla ut veniam fugiat commodo exercitation ipsum. Consequat occaecat dolor qui nulla veniam cupidatat fugiat. Ea ad in adipisicing quis laborum consequat laboris sit laborum nulla ea reprehenderit.",
-    "registered": "Thursday, September 17, 2015 3:13 PM",
-    "skills": [
-      {
-        "id": 0,
-        "name": "c#",
-        "level": 1
-      },
-      {
-        "id": 1,
-        "name": "c#",
-        "level": 2
-      },
-      {
-        "id": 2,
-        "name": "c#",
-        "level": 1
-      }
-    ]
-  },
-  {
-    "guid": "ff859790-4abe-4c91-806e-a5c9da9acfba",
-    "isAllocated": true,
-    "salary": "$3,335.77",
-    "picture": "http://placehold.it/32x32",
-    "age": 22,
-    "specialty": "javascript",
-    "name": {
-      "first": "Sallie",
-      "last": "Hahn"
-    },
-    "company": "UPLINX",
-    "email": "sallie.hahn@uplinx.us",
-    "phone": "+1 (831) 529-2595",
-    "address": "129 Caton Place, Cleary, South Dakota, 8639",
-    "about": "Ullamco anim sint mollit ipsum esse esse laboris aliqua deserunt. Ad proident consectetur labore deserunt aute elit sit aliqua enim aute tempor officia. Amet irure reprehenderit aliquip culpa incididunt tempor laborum duis est commodo occaecat sunt. Sunt est aute sint nostrud enim fugiat tempor. Officia adipisicing duis ullamco laborum irure. Deserunt qui reprehenderit dolor esse sit quis ex anim aute laborum non. Do enim sunt anim cillum deserunt.",
-    "registered": "Tuesday, August 26, 2014 9:03 AM",
-    "skills": [
-      {
-        "id": 0,
-        "name": "java",
-        "level": 1
-      },
-      {
-        "id": 1,
-        "name": "java",
-        "level": 2
-      },
-      {
-        "id": 2,
-        "name": "c#",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "guid": "6e8ac4a6-d5fd-4e28-a8a0-43cff5e3269d",
-    "isAllocated": true,
-    "salary": "$2,235.64",
-    "picture": "http://placehold.it/32x32",
-    "age": 29,
-    "specialty": "c#",
-    "name": {
-      "first": "Tasha",
-      "last": "Webb"
-    },
-    "company": "ZILPHUR",
-    "email": "tasha.webb@zilphur.biz",
-    "phone": "+1 (943) 402-2536",
-    "address": "988 Hope Street, Clay, Louisiana, 2456",
-    "about": "Id aute occaecat voluptate adipisicing incididunt officia veniam in incididunt sit eiusmod pariatur. Commodo anim voluptate aliqua minim sit nostrud minim eu fugiat. Nulla ad magna anim officia exercitation veniam aliqua cillum id elit. Aliqua mollit minim voluptate ex esse fugiat minim veniam laboris cupidatat pariatur aute. Non incididunt elit dolor eu duis commodo labore commodo anim amet officia aliquip.",
-    "registered": "Tuesday, March 28, 2017 8:13 PM",
-    "skills": [
-      {
-        "id": 0,
-        "name": "java",
-        "level": 3
-      },
-      {
-        "id": 1,
-        "name": "java",
-        "level": 3
-      },
-      {
-        "id": 2,
-        "name": "java",
-        "level": 2
-      }
-    ]
-  },
-  {
-    "guid": "7b84a6cc-1e76-4ea8-b7ad-cab40e1ad5dc",
-    "isAllocated": false,
-    "salary": "$1,629.31",
-    "picture": "http://placehold.it/32x32",
-    "age": 20,
-    "specialty": "c#",
-    "name": {
-      "first": "Mcintyre",
-      "last": "Freeman"
-    },
-    "company": "ROCKYARD",
-    "email": "mcintyre.freeman@rockyard.net",
-    "phone": "+1 (816) 448-2058",
-    "address": "952 Logan Street, Gloucester, Illinois, 9511",
-    "about": "Do minim consequat nulla eiusmod ut eiusmod non. Sunt nisi sunt enim laboris consequat pariatur incididunt tempor esse eiusmod duis consequat non. Ea ullamco pariatur est sit et sit id ad nostrud sint et do. Qui ipsum laboris proident velit elit labore tempor cillum deserunt deserunt Lorem dolor nisi consectetur. Elit pariatur nostrud incididunt sit labore aliqua deserunt commodo dolore fugiat mollit adipisicing dolore. Quis consequat pariatur quis eu eu esse labore non duis.",
-    "registered": "Sunday, August 21, 2016 3:12 PM",
+    "company": "NURPLEX",
+    "email": "brock.torres@nurplex.name",
+    "phone": "+1 (831) 582-2320",
+    "address": "203 Union Street, Bangor, Virgin Islands, 8393",
+    "about": "Tempor in tempor commodo incididunt cillum culpa ex ex ad exercitation sunt pariatur reprehenderit adipisicing. Deserunt adipisicing laboris non veniam incididunt commodo proident dolore reprehenderit et minim amet velit ut. Incididunt quis pariatur nostrud enim irure. Excepteur ex nisi eu reprehenderit sint aliqua nostrud ea cupidatat reprehenderit. Commodo irure laboris sunt elit consectetur exercitation culpa id in dolor eiusmod consectetur ullamco. Cupidatat aliqua nostrud pariatur officia sit irure.",
+    "registered": "Wednesday, November 4, 2015 1:31 PM",
     "skills": [
       {
         "id": 0,
         "name": "javascript",
-        "level": 3
+        "level": 1
       },
       {
         "id": 1,
         "name": "java",
-        "level": 3
+        "level": 1
       },
       {
         "id": 2,
-        "name": "c#",
-        "level": 1
+        "name": "java",
+        "level": 2
       }
     ]
   },
   {
-    "guid": "4f60d67b-3f00-4a21-a35b-6b17012feca1",
-    "isAllocated": false,
-    "salary": "$2,096.82",
+    "uid": "488039a3-b470-4cf6-b605-6ac05fd205f7",
+    "isAllocated": true,
+    "salary": "$2,401.68",
     "picture": "http://placehold.it/32x32",
-    "age": 34,
+    "age": 37,
     "specialty": "java",
     "name": {
-      "first": "Padilla",
-      "last": "Richard"
+      "first": "Jewell",
+      "last": "Chang"
     },
-    "company": "VORTEXACO",
-    "email": "padilla.richard@vortexaco.io",
-    "phone": "+1 (818) 592-2080",
-    "address": "572 Green Street, Murillo, Iowa, 7554",
-    "about": "Proident aute ipsum culpa fugiat amet ut eiusmod ipsum amet nostrud voluptate aliqua. Occaecat enim tempor eu occaecat elit excepteur consectetur dolor eiusmod incididunt magna non. Deserunt aliquip anim amet duis incididunt qui aute id voluptate culpa consectetur quis labore reprehenderit. Quis exercitation sint proident cupidatat qui est elit. Quis nisi veniam mollit elit laboris mollit ea esse ut enim qui officia ex non.",
-    "registered": "Monday, June 5, 2017 4:39 AM",
+    "company": "REALYSIS",
+    "email": "jewell.chang@realysis.us",
+    "phone": "+1 (893) 409-2470",
+    "address": "425 Alice Court, Ferney, Alaska, 3609",
+    "about": "Irure dolore laborum esse nulla ex eiusmod enim incididunt enim. Incididunt adipisicing enim fugiat deserunt consectetur sunt voluptate ex officia. Voluptate ut cupidatat nulla Lorem sint sunt ipsum sunt sit qui id reprehenderit fugiat. Laboris aute magna minim sint anim dolore laborum.",
+    "registered": "Saturday, November 11, 2017 3:05 PM",
     "skills": [
       {
         "id": 0,
-        "name": "javascript",
+        "name": "rails",
         "level": 2
       },
       {
         "id": 1,
-        "name": "java",
+        "name": "c#",
         "level": 2
       },
       {
         "id": 2,
-        "name": "javascript",
+        "name": "java",
         "level": 1
       }
     ]
   },
   {
-    "guid": "2d94fb56-16c9-401d-a092-5c3189abaa83",
+    "uid": "44637441-9807-4995-a122-47c3baa35a97",
     "isAllocated": false,
-    "salary": "$1,749.18",
+    "salary": "$1,733.80",
     "picture": "http://placehold.it/32x32",
-    "age": 27,
+    "age": 31,
     "specialty": "c#",
     "name": {
-      "first": "Bettye",
-      "last": "Berger"
+      "first": "Singleton",
+      "last": "Whitfield"
     },
-    "company": "TUBALUM",
-    "email": "bettye.berger@tubalum.org",
-    "phone": "+1 (932) 466-3707",
-    "address": "488 Joralemon Street, Smeltertown, Puerto Rico, 775",
-    "about": "Non duis laborum qui nisi. Sunt esse consectetur ullamco reprehenderit sit. Eu labore in sint et commodo aute nisi eu quis adipisicing enim excepteur voluptate magna. Veniam ut proident nostrud occaecat exercitation. In Lorem eu labore incididunt eiusmod amet magna culpa sint.",
-    "registered": "Tuesday, March 7, 2017 11:30 PM",
+    "company": "ZILLATIDE",
+    "email": "singleton.whitfield@zillatide.net",
+    "phone": "+1 (945) 536-2280",
+    "address": "622 Judge Street, Abiquiu, Nebraska, 2647",
+    "about": "Duis aute elit excepteur nulla ex ut sint commodo qui fugiat. Ipsum incididunt commodo occaecat ad incididunt. Laboris ea officia irure aliquip elit dolore anim. Id aliquip exercitation duis irure ipsum. Duis sint ex irure officia sint ad laboris magna pariatur anim officia magna.",
+    "registered": "Thursday, June 26, 2014 1:44 PM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "java",
+        "level": 2
+      },
+      {
+        "id": 1,
+        "name": "c#",
+        "level": 1
+      },
+      {
+        "id": 2,
+        "name": "javascript",
+        "level": 2
+      }
+    ]
+  },
+  {
+    "uid": "ce818f76-006a-46d0-8f17-cb6ea5afe788",
+    "isAllocated": false,
+    "salary": "$2,457.98",
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "specialty": "c#",
+    "name": {
+      "first": "James",
+      "last": "Fry"
+    },
+    "company": "ELECTONIC",
+    "email": "james.fry@electonic.com",
+    "phone": "+1 (801) 422-3771",
+    "address": "140 Baughman Place, Turpin, Oklahoma, 363",
+    "about": "Veniam culpa officia proident in sunt officia Lorem. Do aliqua est eiusmod adipisicing nulla nostrud id irure sit eiusmod proident mollit aute consectetur. Commodo fugiat nulla consequat eu tempor minim aliqua laborum esse quis laborum. Nostrud ex sint nostrud elit enim ad irure. Amet sint quis incididunt sunt est sunt aliquip cillum pariatur nulla fugiat qui fugiat nulla. Eu deserunt ex officia amet.",
+    "registered": "Tuesday, November 11, 2014 1:17 PM",
     "skills": [
       {
         "id": 0,
@@ -309,7 +239,112 @@
       },
       {
         "id": 2,
+        "name": "rails",
+        "level": 3
+      }
+    ]
+  },
+  {
+    "uid": "f46a0c22-059a-4a62-8c76-eaae9947eb58",
+    "isAllocated": true,
+    "salary": "$3,196.59",
+    "picture": "http://placehold.it/32x32",
+    "age": 32,
+    "specialty": "java",
+    "name": {
+      "first": "Patti",
+      "last": "Gay"
+    },
+    "company": "CONFERIA",
+    "email": "patti.gay@conferia.info",
+    "phone": "+1 (891) 403-2123",
+    "address": "404 Matthews Place, Beechmont, South Carolina, 4324",
+    "about": "Deserunt pariatur laboris consectetur sint ut fugiat ex quis. Commodo anim culpa irure nostrud cupidatat deserunt non fugiat proident quis id aliquip ipsum. Nulla consequat laboris et consequat nisi ullamco nostrud id proident enim labore et exercitation. Eu nostrud et veniam occaecat ullamco proident aliquip deserunt officia. Ad magna culpa ea labore tempor nostrud laborum veniam veniam anim deserunt officia. Velit velit fugiat ut non nostrud. Dolor elit sit eiusmod cupidatat occaecat.",
+    "registered": "Friday, July 24, 2015 7:00 AM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "rails",
+        "level": 2
+      },
+      {
+        "id": 1,
+        "name": "java",
+        "level": 3
+      },
+      {
+        "id": 2,
         "name": "javascript",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "uid": "0d1ed6f7-2b33-4b39-88db-94d0fa3e8604",
+    "isAllocated": true,
+    "salary": "$1,983.69",
+    "picture": "http://placehold.it/32x32",
+    "age": 38,
+    "specialty": "javascript",
+    "name": {
+      "first": "Holman",
+      "last": "Kane"
+    },
+    "company": "PLASMOSIS",
+    "email": "holman.kane@plasmosis.io",
+    "phone": "+1 (872) 471-3545",
+    "address": "437 Grove Place, Brookfield, Washington, 3475",
+    "about": "Voluptate laboris nostrud ipsum qui voluptate sunt nulla veniam veniam excepteur culpa. Labore elit excepteur do in incididunt. Lorem minim proident esse magna nulla eiusmod mollit laborum ipsum. Eu anim culpa est aliqua Lorem sit.",
+    "registered": "Tuesday, January 26, 2016 5:17 AM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "java",
+        "level": 3
+      },
+      {
+        "id": 1,
+        "name": "java",
+        "level": 1
+      },
+      {
+        "id": 2,
+        "name": "rails",
+        "level": 1
+      }
+    ]
+  },
+  {
+    "uid": "d051f15e-78b2-4b2c-9722-b1de3e9f252f",
+    "isAllocated": true,
+    "salary": "$1,682.36",
+    "picture": "http://placehold.it/32x32",
+    "age": 27,
+    "specialty": "javascript",
+    "name": {
+      "first": "Foster",
+      "last": "Hensley"
+    },
+    "company": "MOLTONIC",
+    "email": "foster.hensley@moltonic.org",
+    "phone": "+1 (811) 407-3733",
+    "address": "752 Calder Place, Clara, Pennsylvania, 8374",
+    "about": "Dolor laborum laboris incididunt irure amet elit amet. Non dolore sit sunt culpa quis ad. Irure laborum exercitation velit nisi Lorem. Irure exercitation ullamco ea nostrud fugiat consequat magna enim reprehenderit consequat aute occaecat nostrud. Eu quis culpa cillum ea officia proident nulla do veniam ipsum culpa sunt cupidatat.",
+    "registered": "Thursday, June 29, 2017 1:13 PM",
+    "skills": [
+      {
+        "id": 0,
+        "name": "javascript",
+        "level": 2
+      },
+      {
+        "id": 1,
+        "name": "rails",
+        "level": 1
+      },
+      {
+        "id": 2,
+        "name": "c#",
         "level": 3
       }
     ]

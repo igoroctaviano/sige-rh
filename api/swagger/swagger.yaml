@@ -18,7 +18,7 @@ consumes:
 produces:
   - application/json
 paths:
-  /employee/{id}:
+  /employee/{uid}:
     x-swagger-router-controller: employee
     get:
       tags:
@@ -27,10 +27,10 @@ paths:
       operationId: employee
       parameters:
         - in: path
-          name: id
-          type: integer
+          name: uid
+          type: string
           required: true
-          description: Numeric ID of the employee to get.
+          description: Unique identifier of the employee to get.
       responses:
         "200":
           description: Success
@@ -56,7 +56,7 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-  /plan/{id}:
+  /plan/{uid}:
     x-swagger-router-controller: plan
     get:
       tags:
@@ -65,10 +65,10 @@ paths:
       operationId: plan
       parameters:
         - in: path
-          name: id
-          type: integer
+          name: uid
+          type: string
           required: true
-          description: Numeric ID of the plan to get.
+          description: Unique identifier of the plan to get.
       responses:
         "200":
           description: Success
@@ -125,18 +125,15 @@ paths:
 # complex objects have schema definitions
 definitions:
   EmployeesResponse:
-    type: array
+    type: object
     description: The employees.  
     items:
       type: object
       description: The employee.  
       properties:
-        id:
-          type: integer
-          description: The employee ID.
-        guid:
+        uid:
           type: string
-          description: The employee guid.
+          description: The employee unique identifier.
         isAllocated:
           type: boolean
           description: The employee availability.
@@ -196,12 +193,9 @@ definitions:
   EmployeeResponse:
     description: The employee.
     properties:
-      id:
-        type: integer
-        description: The employee ID.
-      guid:
+      uid:
         type: string
-        description: The employee guid.
+        description: The employee unique identifier.
       isAllocated:
         type: boolean
         description: The employee availability.
@@ -259,21 +253,21 @@ definitions:
               type: integer
               description: The skill level.
   PlansResponse:
-    type: array
+    type: object
     description: The plans.  
     items:
       type: object
       description: The plan.
       properties:
         employee:
-          type: integer
-          description: The employee ID.
-        contractType:
-          type: integer
-          description: The contract type ID.
-        guid:
           type: string
-          description: The plan guid.
+          description: The employee unique identifier.
+        contractType:
+          type: string
+          description: The contract type unique identifier.
+        uid:
+          type: string
+          description: The plan unique identifier.
         isApproved:
           type: boolean
           description: The plan status.
@@ -293,14 +287,14 @@ definitions:
     description: The contracting plan.
     properties:
       employee:
-        type: integer
-        description: The employee ID.
-      contractType:
-        type: integer
-        description: The contract type ID.
-      guid:
         type: string
-        description: The plan guid.
+        description: The employee unique identifier.
+      contractType:
+        type: string
+        description: The contract type unique identifier.
+      uid:
+        type: string
+        description: The plan unique identifier.
       isApproved:
         type: boolean
         description: The plan status.

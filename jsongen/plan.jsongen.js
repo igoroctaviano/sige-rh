@@ -1,9 +1,9 @@
 [
   {
     'repeat(5, 10)': {
-      employee: '{{index()}}',
-      contractType: '{{index()}}',
-      guid: '{{guid()}}',
+      employee: '{{guid()}}',
+      contractType: '{{guid()}}',
+      uid: '{{guid()}}',
       isApproved: '{{bool()}}',
       salary: '{{floating(1000, 4000, 2, "$0,0.00")}}',
       client: '{{company().toUpperCase()}}',

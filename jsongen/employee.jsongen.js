@@ -1,7 +1,7 @@
 [
   {
     'repeat(5, 10)': {
-      guid: '{{guid()}}',
+      uid: '{{guid()}}',
       isAllocated: '{{bool()}}',
       salary: '{{floating(1000, 4000, 2, "$0,0.00")}}',
       picture: 'http://placehold.it/32x32',
