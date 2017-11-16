@@ -3,13 +3,13 @@
 var util = require("util");
 var db = require("../../db/db");
 
-function employee(req, res) {
+function approval(req, res) {
   var id = req.swagger.params.uid.value;
-  db.employee(id, function(employee) {
-    res.json(employee);
+  db.approval(id, function(approval) {
+    res.json(approval);
   });
 }
 
 module.exports = {
-  employee: employee
+  approval: approval
 };

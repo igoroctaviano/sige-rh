@@ -94,6 +94,44 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /approval/{uid}:
+    x-swagger-router-controller: approval
+    get:
+      tags:
+        - approvals
+      description: Returns approval to the caller
+      operationId: approval
+      parameters:
+        - in: path
+          name: uid
+          type: string
+          required: true
+          description: Unique identifier of the approval to get.
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/ApprovalResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /approval:
+    x-swagger-router-controller: approvals
+    get:
+      tags:
+        - approvals
+      description: Returns approval to the caller
+      operationId: approvals
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/ApprovalsResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /hello:
     # binds a127 app logic to a route
     x-swagger-router-controller: hello_world
@@ -310,6 +348,40 @@ definitions:
       registered:
         type: string
         description: The plan registration date.
+  ApprovalsResponse:
+    type: array
+    description: The approvals.  
+    items:
+      type: object
+      description: The approval.
+      properties:
+        uid:
+          type: string
+          description: The approval unique identifier.
+        plan:
+          type: string
+          description: The plan unique identifier.
+        isApproved:
+          type: boolean
+          description: The plan approval status.
+        approvalDate:
+          type: string
+          description: The approval date.
+  ApprovalResponse:
+    description: The contracting plan approval.
+    properties:
+      uid:
+        type: string
+        description: The approval unique identifier.
+      plan:
+        type: string
+        description: The plan unique identifier.
+      isApproved:
+        type: boolean
+        description: The plan approval status.
+      approvalDate:
+        type: string
+        description: The approval date.
   HelloWorldResponse:
     required:
       - message
