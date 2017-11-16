@@ -136,12 +136,27 @@ function approval(id, callback) {
   });
 }
 
+function saveApproval(approval, callback) {
+  db
+    .ref("/approval")
+    .push(approval)
+    .then(callback);
+}
+
+function deleteApproval() {
+  db
+    .child(id)
+    .remove()
+    .then(callback);
+}
+
 module.exports = {
-  refresh: refresh,
-  employees: employees,
-  employee: employee,
-  plans: plans,
-  plan: plan,
-  approvals: approvals,
-  approval: approval
+  refresh,
+  employees,
+  employee,
+  plans,
+  plan,
+  approvals,
+  approval,
+  saveApproval
 };

@@ -24,7 +24,7 @@ paths:
       tags:
         - employees
       description: Returns employee to the caller
-      operationId: employee
+      operationId: selectEmployee
       parameters:
         - in: path
           name: uid
@@ -41,12 +41,12 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"
   /employee:
-    x-swagger-router-controller: employees
+    x-swagger-router-controller: employee
     get:
       tags:
         - employees
       description: Returns employees to the caller
-      operationId: employees
+      operationId: getEmployees
       responses:
         "200":
           description: Success
@@ -62,7 +62,7 @@ paths:
       tags:
         - plans
       description: Returns plan to the caller
-      operationId: plan
+      operationId: selectPlan
       parameters:
         - in: path
           name: uid
@@ -79,12 +79,12 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"
   /plan:
-    x-swagger-router-controller: plans
+    x-swagger-router-controller: plan
     get:
       tags:
         - plans
       description: Returns contract plan to the caller
-      operationId: plans
+      operationId: getPlans
       responses:
         "200":
           description: Success
@@ -100,7 +100,7 @@ paths:
       tags:
         - approvals
       description: Returns approval to the caller
-      operationId: approval
+      operationId: selectApproval
       parameters:
         - in: path
           name: uid
@@ -117,12 +117,12 @@ paths:
           schema:
             $ref: "#/definitions/ErrorResponse"
   /approval:
-    x-swagger-router-controller: approvals
+    x-swagger-router-controller: approval
     get:
       tags:
         - approvals
       description: Returns approval to the caller
-      operationId: approvals
+      operationId: getApprovals
       responses:
         "200":
           description: Success
@@ -132,14 +132,34 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+    post:
+      tags:
+        - approvals
+      operationId: saveApproval
+      summary: Creates a new approval.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: approval
+          description: The approval to create.
+          schema:
+            $ref: "#/definitions/Approval"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/PostApprovalResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /hello:
-    # binds a127 app logic to a route
     x-swagger-router-controller: hello_world
     get:
       tags:
         - tests
       description: Returns 'Hello' to the caller
-      # used as the method name of the controller
       operationId: hello
       parameters:
         - in: query
@@ -151,16 +171,13 @@ paths:
         "200":
           description: Success
           schema:
-            # a pointer to a definition
             $ref: "#/definitions/HelloWorldResponse"
-        # responses may fall through to errors
         default:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
   /swagger:
     x-swagger-pipe: swagger_raw
-# complex objects have schema definitions
 definitions:
   EmployeesResponse:
     type: array
@@ -369,6 +386,35 @@ definitions:
           description: The approval date.
   ApprovalResponse:
     description: The contracting plan approval.
+    properties:
+      uid:
+        type: string
+        description: The approval unique identifier.
+      plan:
+        type: string
+        description: The plan unique identifier.
+      isApproved:
+        type: boolean
+        description: The plan approval status.
+      approvalDate:
+        type: string
+        description: The approval date.
+  PostApprovalResponse:
+    description: The approval post response.
+    type: object
+    properties:
+      success:
+        type: string
+        description: The approval post status.
+      description:
+        type: string
+        description: The approval post success message.
+  Approval:
+    type: object
+    required:
+      - plan
+      - isApproved
+      - approvalDate
     properties:
       uid:
         type: string
