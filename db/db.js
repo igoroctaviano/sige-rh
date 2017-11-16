@@ -26,137 +26,119 @@ firebase.initializeApp({
 
 var db = firebase.database();
 
+function getData(entityName) {
+  var data;
+  switch (entityName) {
+    case "employee":
+      data = employeesData;
+      break;
+    case "plan":
+      data = plansData;
+      break;
+    case "approval":
+      data = approvalsData;
+      break;
+  }
+  return data;
+}
+
 function refresh(callback) {
-  db
-    .ref("/employee")
-    .set(null)
+  refreshEntity("employee")
     .then(function() {
-      employeesData.forEach(function(employee) {
-        var newEmployee = db.ref("/employee").push();
-        employee.uid = newEmployee.key;
-        newEmployee.set(employee);
-      });
+      refreshEntity("plan");
     })
     .then(function() {
-      db
-        .ref("/plan")
-        .set(null)
-        .then(function() {
-          plansData.forEach(function(plan) {
-            var newPlan = db.ref("/plan").push();
-            plan.uid = newPlan.key;
-            newPlan.set(plan);
-          });
-        });
+      refreshEntity("approval");
     })
-    .then(function() {
-      db
-        .ref("/approval")
-        .set(null)
-        .then(function() {
-          approvalsData.forEach(function(approval) {
-            var newApproval = db.ref("/approval").push();
-            approval.uid = newApproval.key;
-            newApproval.set(approval);
-          });
-        })
-        .then(callback);
-    });
-}
-
-function employees(callback) {
-  db.ref("/employee").on("value", function(snapshot) {
-    var employees;
-
-    if (snapshot.val()) {
-      employees = snapshot.val();
-    }
-
-    callback(Object.keys(employees).map(key => employees[key]));
-  });
-}
-
-function employee(id, callback) {
-  db.ref("/employee/" + id).on("value", function(snapshot) {
-    var employee;
-
-    if (snapshot.val()) {
-      employee = snapshot.val();
-    }
-
-    callback(employee);
-  });
-}
-
-function plans(callback) {
-  db.ref("/plan").on("value", function(snapshot) {
-    var plans;
-
-    if (snapshot.val()) {
-      plans = snapshot.val();
-    }
-
-    callback(Object.keys(plans).map(key => plans[key]));
-  });
-}
-
-function plan(id, callback) {
-  db.ref("/plan/" + id).on("value", function(snapshot) {
-    var plan;
-
-    if (snapshot.val()) {
-      plan = snapshot.val();
-    }
-
-    callback(plan);
-  });
-}
-
-function approvals(callback) {
-  db.ref("/approval").on("value", function(snapshot) {
-    var approvals;
-
-    if (snapshot.val()) {
-      approvals = snapshot.val();
-    }
-
-    callback(Object.keys(approvals).map(key => approvals[key]));
-  });
-}
-
-function approval(id, callback) {
-  db.ref("/approval/" + id).on("value", function(snapshot) {
-    var approval;
-
-    if (snapshot.val()) {
-      approval = snapshot.val();
-    }
-
-    callback(approval);
-  });
-}
-
-function saveApproval(approval, callback) {
-  db
-    .ref("/approval")
-    .push(approval)
     .then(callback);
 }
 
-function deleteApproval() {
+function refreshEntity(entityName) {
+  return db
+    .ref("/" + entityName)
+    .set(null)
+    .then(function() {
+      getData(entityName).forEach(function(entity) {
+        var newEntity = db.ref("/" + entityName).push();
+        entity.uid = newEntity.key;
+        newEntity.set(entity);
+      });
+    });
+}
+
+function reset(callback) {
+  resetEntity("employee")
+    .then(function() {
+      resetEntity("plan");
+    })
+    .then(function() {
+      resetEntity("approval");
+    })
+    .then(callback);
+}
+
+function resetEntity(entityName, callback) {
+  return db
+    .ref("/" + entityName)
+    .set(null)
+    .then(callback);
+}
+
+function get(entityName, uid, callback) {
+  db.ref("/" + entityName + "/" + uid).on("value", function(snapshot) {
+    var entity;
+
+    if (snapshot.val()) {
+      entity = snapshot.val();
+    }
+
+    callback(entity);
+  });
+}
+
+function all(entityName, callback) {
+  db.ref("/" + entityName).on("value", function(snapshot) {
+    var entities;
+
+    if (snapshot.val()) {
+      entities = snapshot.val();
+    }
+
+    callback(Object.keys(entities).map(key => entities[key]));
+  });
+}
+
+function save(entityName, entity, callback) {
   db
-    .child(id)
+    .ref("/" + entityName)
+    .push()
+    .then(function(ref) {
+      var newEntity = ref;
+      entity.uid = newEntity.key;
+      newEntity.set(entity);
+    }).then(callback);
+}
+
+function update(entityName, entity, callback) {
+  db
+  .ref("/" + entityName + "/" + entity.uid)
+    .set(entity)
+    .then(callback);
+}
+
+function remove(entityName, uid, callback) {
+  db
+    .ref("/" + entityName + "/" + uid)
     .remove()
     .then(callback);
 }
 
 module.exports = {
   refresh,
-  employees,
-  employee,
-  plans,
-  plan,
-  approvals,
-  approval,
-  saveApproval
+  refreshEntity,
+  get,
+  all,
+  save,
+  update,
+  remove
 };

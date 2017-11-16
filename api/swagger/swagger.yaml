@@ -3,7 +3,7 @@ info:
   version: "0.0.1"
   title: Sistemas Integrados de Gestão Empresarial (API Recursos Humanos) 
 # during dev, should point to your local machine
-host: sige-rh.herokuapp.com
+host: sige-rh.herokuapp.com # localhost:10010
 # basePath prefixes all resource paths 
 basePath: /
 # 
@@ -24,7 +24,7 @@ paths:
       tags:
         - employees
       description: Returns employee to the caller
-      operationId: selectEmployee
+      operationId: getEmployee
       parameters:
         - in: path
           name: uid
@@ -46,7 +46,7 @@ paths:
       tags:
         - employees
       description: Returns employees to the caller
-      operationId: getEmployees
+      operationId: allEmployees
       responses:
         "200":
           description: Success
@@ -62,7 +62,7 @@ paths:
       tags:
         - plans
       description: Returns plan to the caller
-      operationId: selectPlan
+      operationId: getPlan
       parameters:
         - in: path
           name: uid
@@ -84,7 +84,7 @@ paths:
       tags:
         - plans
       description: Returns contract plan to the caller
-      operationId: getPlans
+      operationId: allPlans
       responses:
         "200":
           description: Success
@@ -100,7 +100,7 @@ paths:
       tags:
         - approvals
       description: Returns approval to the caller
-      operationId: selectApproval
+      operationId: getApproval
       parameters:
         - in: path
           name: uid
@@ -122,7 +122,7 @@ paths:
       tags:
         - approvals
       description: Returns approval to the caller
-      operationId: getApprovals
+      operationId: allApprovals
       responses:
         "200":
           description: Success
@@ -144,12 +144,96 @@ paths:
           name: approval
           description: The approval to create.
           schema:
-            $ref: "#/definitions/Approval"
+            $ref: "#/definitions/PostApprovalResponse"
       responses:
         "200":
           description: Success
           schema:
-            $ref: "#/definitions/PostApprovalResponse"
+            $ref: "#/definitions/SuccessApprovalResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /refresh:
+    x-swagger-router-controller: refresh
+    post:
+      tags:
+        - database
+      operationId: refresh
+      summary: Refresh all entities data.
+      consumes:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/SuccessRefreshResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /refresh/{entity}:
+    x-swagger-router-controller: refresh
+    post:
+      tags:
+        - database
+      operationId: refreshEntity
+      summary: Refresh specific entity data.
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: entity          
+          type: string
+          required: true
+          description: The database entity to be refreshed.
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/SuccessRefreshResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /reset:
+    x-swagger-router-controller: reset
+    post:
+      tags:
+        - database
+      operationId: reset
+      summary: Reset all entities data.
+      consumes:
+        - application/json
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/SuccessResetResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /reset/{entity}:
+    x-swagger-router-controller: reset
+    post:
+      tags:
+        - database
+      operationId: resetEntity
+      summary: Reset specific entity data.
+      consumes:
+        - application/json
+      parameters:
+        - in: path
+          name: entity
+          type: string
+          required: true
+          description: The database entity to be reseted.
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/SuccessResetResponse"
         default:
           description: Error
           schema:
@@ -399,17 +483,37 @@ definitions:
       approvalDate:
         type: string
         description: The approval date.
-  PostApprovalResponse:
+  SuccessApprovalResponse:
     description: The approval post response.
     type: object
     properties:
       success:
-        type: string
+        type: integer
         description: The approval post status.
       description:
         type: string
         description: The approval post success message.
-  Approval:
+  SuccessRefreshResponse:
+    description: The database refresh response.
+    type: object
+    properties:
+      success:
+        type: integer
+        description: The database refresh post status.
+      description:
+        type: string
+        description: The database refresh post success message.
+  SuccessResetResponse:
+    description: The database reset response.
+    type: object
+    properties:
+      success:
+        type: integer
+        description: The database reset post status.
+      description:
+        type: string
+        description: The database reset post success message.
+  PostApprovalResponse:
     type: object
     required:
       - plan

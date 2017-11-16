@@ -3,38 +3,42 @@
 var util = require("util");
 var db = require("../../db/db");
 
-function getPlans(req, res) {
-  db.plans(function(plans) {
-    res.json(plans);
-  });
-}
-
-function selectPlan(req, res) {
-  var id = req.swagger.params.uid.value;
-  db.plan(id, function(plan) {
+function getPlan(req, res) {
+  var uid = req.swagger.params.uid.value;
+  db.get("plan", uid, function(plan) {
     res.json(plan);
   });
 }
 
-function savePlan(req, res) {
-  res.json({ success: db.push(req.body), description: "Plan saved!" });
+function allPlans(req, res) {
+  db.all("plan", function(plans) {
+    res.json(plans);
+  });
 }
 
-function deletePlan(req, res) {
-  var id = req.swagger.params.uid.value;
-  db
-    .child(id)
-    .remove(function(error) {
-      res.status(204).send(error);
-    })
-    .then(function() {
-      res.json({ success: 1, description: "Plan deleted!" });
-    });
+function savePlan(req, res) {
+  db.save("plan", req.body, function() {
+    res.json({ success: 1, description: "Plan saved!" });
+  });
+}
+
+function updatePlan(req, res) {
+  db.update("plan", req.body, function() {
+    res.json({ success: 1, description: "Plan updated!" });
+  });
+}
+
+function removePlan(req, res) {
+  var uid = req.swagger.params.uid.value;
+  db.remove("plan", uid, function() {
+    res.json({ success: 1, description: "Plan removed!" });
+  });
 }
 
 module.exports = {
-  getPlans,
-  selectPlan,
+  getPlan,
+  allPlans,
   savePlan,
-  deletePlan
+  updatePlan,
+  removePlan
 };

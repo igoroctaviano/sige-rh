@@ -3,38 +3,42 @@
 var util = require("util");
 var db = require("../../db/db");
 
-function getEmployees(req, res) {
-  db.employees(function(employees) {
-    res.json(employees);
-  });
-}
-
-function selectEmployee(req, res) {
-  var id = req.swagger.params.uid.value;
-  db.employee(id, function(employee) {
+function getEmployee(req, res) {
+  var uid = req.swagger.params.uid.value;
+  db.get("employee", uid, function(employee) {
     res.json(employee);
   });
 }
 
-function saveEmployee(req, res) {
-  res.json({ success: db.push(req.body), description: "Employee saved!" });
+function allEmployees(req, res) {
+  db.all("employee", function(employees) {
+    res.json(employees);
+  });
 }
 
-function deleteEmployee(req, res) {
-  var id = req.swagger.params.uid.value;
-  db
-    .child(id)
-    .remove(function(error) {
-      res.status(204).send(error);
-    })
-    .then(function() {
-      res.json({ success: 1, description: "Employee deleted!" });
-    });
+function saveEmployee(req, res) {
+  db.save("employee", req.body, function() {
+    res.json({ success: 1, description: "Employee saved!" });
+  });
+}
+
+function updateEmployee(req, res) {
+  db.update("employee", req.body, function() {
+    res.json({ success: 1, description: "Employee updated!" });
+  });
+}
+
+function removeEmployee(req, res) {
+  var uid = req.swagger.params.uid.value;
+  db.remove("employee", uid, function() {
+    res.json({ success: 1, description: "Employee removed!" });
+  });
 }
 
 module.exports = {
-  getEmployees,
-  selectEmployee,
+  getEmployee,
+  allEmployees,
   saveEmployee,
-  deleteEmployee
+  updateEmployee,
+  removeEmployee
 };
