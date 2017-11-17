@@ -1,9 +1,5 @@
 var firebase = require("firebase-admin");
 
-const employeesData = require("./data/employee");
-const plansData = require("./data/plan");
-const approvalsData = require("./data/approval");
-
 var serviceAccount = {
   type: "service_account",
   project_id: "sige-rh",
@@ -26,62 +22,76 @@ firebase.initializeApp({
 
 var db = firebase.database();
 
-function getData(entityName) {
-  var data;
-  switch (entityName) {
-    case "employee":
-      data = employeesData;
-      break;
-    case "plan":
-      data = plansData;
-      break;
-    case "approval":
-      data = approvalsData;
-      break;
-  }
-  return data;
-}
-
-function refresh(callback) {
-  refreshEntity("employee")
-    .then(function() {
-      refreshEntity("plan");
-    })
-    .then(function() {
-      refreshEntity("approval");
-    })
-    .then(callback);
-}
-
-function refreshEntity(entityName) {
-  return db
-    .ref("/" + entityName)
-    .set(null)
-    .then(function() {
-      getData(entityName).forEach(function(entity) {
-        var newEntity = db.ref("/" + entityName).push();
-        entity.uid = newEntity.key;
-        newEntity.set(entity);
-      });
-    });
-}
+var employeesData = require("./data/employee");
+var plansData = require("./data/plan");
+var planTypesData = require("./data/planType");
+var employeeTypesData = require("./data/employeeType");
+var approvalsData = require("./data/approval");
 
 function reset(callback) {
-  resetEntity("employee")
-    .then(function() {
-      resetEntity("plan");
-    })
-    .then(function() {
-      resetEntity("approval");
-    })
+  db
+    .ref("/")
+    .set(null)
     .then(callback);
 }
 
-function resetEntity(entityName, callback) {
-  return db
-    .ref("/" + entityName)
-    .set(null)
-    .then(callback);
+function initialize(callback) {
+  reset(function() {
+    employeeTypesData.forEach(function(type) {
+      save("employee/type", type, function() {});
+    });
+
+    employeesData.forEach(function(employee) {
+      db
+        .ref("/employee")
+        .push()
+        .then(function(ref) {
+          var newEmployee = ref;
+          employee.uid = newEmployee.key;
+          employee.type =
+            employeeTypesData[
+              Math.floor(Math.random() * employeeTypesData.length)
+            ].uid;
+          newEmployee.set(employee);
+        });
+    });
+
+    planTypesData.forEach(function(type) {
+      save("plan/type", type, function() {});
+    });
+
+    plansData.forEach(function(plan) {
+      db
+        .ref("/plan")
+        .push()
+        .then(function(ref) {
+          var newPlan = ref;
+          plan.uid = newPlan.key;
+          plan.employee =
+            employeeTypesData[
+              Math.floor(Math.random() * employeeTypesData.length)
+            ].uid;
+          plan.type =
+            planTypesData[Math.floor(Math.random() * planTypesData.length)].uid;
+          newPlan.set(plan);
+        });
+    });
+
+    approvalsData.forEach(function(approval) {
+      db
+        .ref("/approval")
+        .push()
+        .then(function(ref) {
+          var newApproval = ref;
+          approval.uid = newApproval.key;
+          approval.plan =
+            plansData[Math.floor(Math.random() * plansData.length)].uid;
+          newApproval.set(approval);
+        });
+    });
+
+    callback();
+  });
 }
 
 function get(entityName, uid, callback) {
@@ -116,12 +126,13 @@ function save(entityName, entity, callback) {
       var newEntity = ref;
       entity.uid = newEntity.key;
       newEntity.set(entity);
-    }).then(callback);
+    })
+    .then(callback);
 }
 
 function update(entityName, entity, callback) {
   db
-  .ref("/" + entityName + "/" + entity.uid)
+    .ref("/" + entityName + "/" + entity.uid)
     .set(entity)
     .then(callback);
 }
@@ -134,8 +145,7 @@ function remove(entityName, uid, callback) {
 }
 
 module.exports = {
-  refresh,
-  refreshEntity,
+  initialize,
   get,
   all,
   save,

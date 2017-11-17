@@ -1,82 +1,152 @@
 [
   {
-    "employee": "ba99b17b-4867-4ff4-a69d-31fede8accb0",
-    "contractType": "5f1e343c-bec5-45d5-9201-0ee893088913",
-    "uid": "105435d6-2ccb-4bd7-8037-6751162d587e",
+    "uid": "",
+    "employee": "",
+    "type": "",
     "isApproved": false,
-    "salary": "$1,142.17",
-    "client": "BOINK",
-    "details": "Consectetur amet sunt officia dolore consectetur excepteur eu labore. Irure aliqua mollit qui culpa in. Id excepteur esse dolore Lorem consectetur excepteur. In incididunt consectetur ut laborum minim anim aliqua do amet aliqua ullamco. Eiusmod incididunt dolor eiusmod ad incididunt. Lorem dolore ea ut officia anim incididunt qui et tempor sit nisi pariatur. Minim aliquip adipisicing commodo aute est adipisicing irure nostrud aute proident voluptate do laboris eiusmod.",
-    "registered": "Monday, November 14, 2016 12:59 AM"
+    "salary": "$2,223.48",
+    "client": "VETRON",
+    "details": "Reprehenderit duis occaecat velit amet magna voluptate quis mollit. Irure ea irure cupidatat enim mollit. Do veniam fugiat qui cillum veniam. Excepteur ad voluptate eu qui non officia ex tempor est excepteur.",
+    "registered": "Wednesday, May 3, 2017 1:50 AM"
   },
   {
-    "employee": "cf3bc875-6160-44d6-9c8c-aeada8f7f244",
-    "contractType": "59dab621-3d16-432c-b2a9-6da08fb76ea6",
-    "uid": "2ffbe11e-d78f-4794-b4e7-2c7dd2e3455c",
+    "uid": "",
+    "employee": "",
+    "type": "",
+    "isApproved": true,
+    "salary": "$3,871.53",
+    "client": "PREMIANT",
+    "details": "Culpa dolor cupidatat dolore deserunt. Ut enim eiusmod nulla laborum nulla pariatur mollit dolor elit occaecat commodo esse do. Nisi commodo irure laboris nisi cillum eiusmod nulla exercitation sunt incididunt eiusmod ex. Reprehenderit tempor adipisicing culpa duis amet velit officia proident veniam eiusmod magna amet. Cupidatat est eiusmod cillum fugiat qui id enim nisi magna.",
+    "registered": "Tuesday, August 11, 2015 8:33 AM"
+  },
+  {
+    "uid": "",
+    "employee": "",
+    "type": "",
+    "isApproved": true,
+    "salary": "$3,581.41",
+    "client": "EDECINE",
+    "details": "Ut minim consequat enim mollit culpa anim anim anim. Esse aute eiusmod anim proident veniam ullamco mollit nisi occaecat. Velit aliqua consectetur minim magna ullamco cillum. Aliquip consectetur tempor officia aute in ea aliqua velit eiusmod.",
+    "registered": "Sunday, August 13, 2017 2:40 PM"
+  },
+  {
+    "uid": "",
+    "employee": "",
+    "type": "",
     "isApproved": false,
-    "salary": "$2,616.69",
-    "client": "PODUNK",
-    "details": "Non nostrud qui excepteur reprehenderit et nisi Lorem. Dolor velit laborum mollit nulla magna Lorem esse ullamco sint et ipsum duis. Exercitation commodo Lorem deserunt veniam amet voluptate voluptate enim eiusmod ex irure ea. Minim minim id consectetur enim eiusmod officia ullamco.",
-    "registered": "Sunday, September 4, 2016 3:38 PM"
+    "salary": "$2,349.96",
+    "client": "LIQUIDOC",
+    "details": "Nostrud culpa culpa pariatur ut ad pariatur consequat sunt non dolor laborum. Magna non sint ullamco commodo do anim officia voluptate magna. Esse anim officia deserunt veniam sit. Nisi cupidatat sunt magna deserunt labore magna ut aliquip. Sunt exercitation quis do qui elit nisi minim.",
+    "registered": "Sunday, June 26, 2016 4:06 AM"
   },
   {
-    "employee": "5600c1d9-7d0c-41f7-8425-8db332239853",
-    "contractType": "1c111218-3071-4abf-80f4-25b6125cf052",
-    "uid": "687ab1fe-86cd-47c2-9a63-7881119d2ac8",
+    "uid": "",
+    "employee": "",
+    "type": "",
     "isApproved": true,
-    "salary": "$1,131.25",
-    "client": "XEREX",
-    "details": "Excepteur id ullamco eiusmod reprehenderit minim tempor mollit. Nostrud ullamco officia velit ex veniam laboris velit aliqua in culpa culpa dolore duis. Eiusmod velit ut et mollit aliquip commodo sunt velit. Aliquip aute officia voluptate exercitation ea reprehenderit ullamco dolor ad ut aliquip. Officia laboris mollit aute culpa laborum qui eu mollit deserunt pariatur. Velit laborum aute veniam ut esse.",
-    "registered": "Wednesday, January 25, 2017 11:30 AM"
+    "salary": "$3,522.54",
+    "client": "NETBOOK",
+    "details": "Ipsum nostrud ex dolor non officia quis tempor non nulla nisi aute. Laboris adipisicing sint est pariatur laboris sit. Ullamco ex pariatur dolore exercitation est commodo tempor sunt. Laboris reprehenderit anim laborum ad nostrud aliquip irure anim quis in ipsum excepteur. Minim consequat ipsum esse sit. Veniam in irure id duis Lorem consequat veniam. Duis magna amet labore non veniam non ex velit qui.",
+    "registered": "Thursday, June 2, 2016 4:17 AM"
   },
   {
-    "employee": "ef9a204c-061e-42ed-a615-6d3c67b3e4d2",
-    "contractType": "aadaba41-d079-4280-a558-8f39ecba7d30",
-    "uid": "93b561ef-be2d-4af7-8a2e-237b5a5660ab",
+    "uid": "",
+    "employee": "",
+    "type": "",
     "isApproved": false,
-    "salary": "$3,461.52",
-    "client": "ZUVY",
-    "details": "Culpa ex id cupidatat dolor enim cupidatat voluptate. Minim ea occaecat eiusmod sunt anim esse est velit. Non elit sunt eu nulla magna deserunt tempor eu occaecat nisi laboris.",
-    "registered": "Sunday, August 7, 2016 9:07 PM"
+    "salary": "$2,237.33",
+    "client": "CHILLIUM",
+    "details": "Elit cupidatat eiusmod ex exercitation voluptate ad mollit cupidatat cupidatat do Lorem quis irure do. Excepteur quis laborum enim Lorem tempor occaecat magna ex culpa quis Lorem sint. Elit et ullamco ut Lorem labore. Culpa proident quis labore id nostrud.",
+    "registered": "Sunday, December 27, 2015 3:46 PM"
   },
   {
-    "employee": "189975cb-b2dd-4340-bd16-3aa96dea2960",
-    "contractType": "2ab2e2be-feab-4e9f-a04a-c7fcfc1b460a",
-    "uid": "96536c23-4916-4e80-9ebe-2da27a9a6247",
+    "uid": "",
+    "employee": "",
+    "type": "",
     "isApproved": true,
-    "salary": "$1,665.58",
-    "client": "ZILLACTIC",
-    "details": "Nisi sit ipsum in anim adipisicing id aliquip elit nostrud. Ea dolore eu do in aliqua esse duis eu cupidatat dolor et. Incididunt sint labore voluptate velit.",
-    "registered": "Thursday, May 21, 2015 8:58 PM"
+    "salary": "$1,972.25",
+    "client": "XYQAG",
+    "details": "Magna veniam anim aliqua duis duis ad sunt irure pariatur sit eu non. Id et incididunt exercitation aliquip qui amet consequat commodo fugiat officia. Anim consequat nisi excepteur consectetur nulla ea velit dolore exercitation aute.",
+    "registered": "Thursday, March 20, 2014 3:02 PM"
   },
   {
-    "employee": "bd7d415a-05a3-4e6b-8a6a-10f1e8d0c937",
-    "contractType": "d4c9ecd8-aca1-4762-abe5-58c7903ebf23",
-    "uid": "68cc06f2-6af5-4292-92ad-55f617f5a52f",
+    "uid": "",
+    "employee": "",
+    "type": "",
+    "isApproved": true,
+    "salary": "$3,386.68",
+    "client": "DOGNOST",
+    "details": "Officia enim ex ex nostrud non elit deserunt ad ullamco ipsum aute exercitation tempor aute. Qui sit id velit consectetur incididunt consequat consequat sit cillum cillum reprehenderit. Irure labore excepteur ut et qui est consequat enim anim consequat minim dolor. Do culpa nisi reprehenderit in quis ea commodo nulla proident ut.",
+    "registered": "Wednesday, September 14, 2016 2:55 PM"
+  },
+  {
+    "uid": "",
+    "employee": "",
+    "type": "",
     "isApproved": false,
-    "salary": "$3,769.91",
-    "client": "KEENGEN",
-    "details": "Nulla non fugiat excepteur dolore proident Lorem in incididunt adipisicing occaecat do. Ut ipsum reprehenderit sint laboris esse commodo quis excepteur sint ea non. Non tempor consectetur adipisicing excepteur. Sint deserunt dolor et dolore duis deserunt voluptate magna dolore. Est deserunt qui eu aliqua nostrud reprehenderit.",
-    "registered": "Wednesday, October 19, 2016 11:44 AM"
+    "salary": "$1,944.88",
+    "client": "HOMELUX",
+    "details": "Dolore quis commodo aliqua excepteur anim occaecat nisi. Amet dolor voluptate consequat non non ullamco. Fugiat laboris irure velit aute eiusmod id laborum pariatur aute anim eiusmod reprehenderit labore. Magna magna reprehenderit ea ea nisi excepteur commodo anim elit qui in excepteur proident.",
+    "registered": "Tuesday, February 3, 2015 2:04 PM"
   },
   {
-    "employee": "3b7e4602-ef02-4a07-9c77-43f5a1078da6",
-    "contractType": "0982bb73-011f-4482-96e3-c3c4d24c04cf",
-    "uid": "c30fb714-9380-40a4-9d3d-02e270f231a7",
+    "uid": "",
+    "employee": "",
+    "type": "",
     "isApproved": true,
-    "salary": "$2,472.16",
-    "client": "OTHERSIDE",
-    "details": "Sint ipsum dolor sunt in do laboris consectetur pariatur excepteur ad. Eiusmod quis ut ipsum voluptate cupidatat sint occaecat dolor consequat. Voluptate proident enim ut elit pariatur. Exercitation cillum et cupidatat eu ad esse exercitation exercitation veniam. Deserunt dolore consectetur proident nostrud sint et anim. Pariatur mollit ea veniam in ad velit irure ad laboris ex velit ipsum. Proident et voluptate velit eu enim cupidatat aliquip quis sunt.",
-    "registered": "Sunday, April 24, 2016 11:15 AM"
+    "salary": "$1,116.61",
+    "client": "POOCHIES",
+    "details": "Anim et exercitation in quis culpa aliqua. Consectetur labore excepteur anim occaecat est sint proident. Tempor deserunt exercitation elit anim id culpa commodo aute cillum. Ut duis tempor non voluptate.",
+    "registered": "Sunday, October 2, 2016 10:57 AM"
   },
   {
-    "employee": "b64c4919-c2f6-4181-9382-b99b4dfde6c8",
-    "contractType": "05f55b7d-9aea-4bc4-a68a-1299fb9780fd",
-    "uid": "7d42f24f-7aa4-4ea4-a3d5-232eff7b6b19",
+    "uid": "",
+    "employee": "",
+    "type": "",
+    "isApproved": false,
+    "salary": "$3,239.30",
+    "client": "POLARIA",
+    "details": "Sunt dolore nulla sint veniam ea sit culpa velit reprehenderit quis amet esse. Ea velit ipsum duis officia exercitation officia dolor dolor deserunt nostrud minim mollit. Ad pariatur id laboris consectetur in cillum qui esse nisi culpa laboris sit voluptate qui. Ut excepteur cupidatat commodo tempor proident occaecat qui aliqua cillum enim. Nulla fugiat esse minim aute consequat in.",
+    "registered": "Sunday, March 29, 2015 1:09 PM"
+  },
+  {
+    "uid": "",
+    "employee": "",
+    "type": "",
+    "isApproved": false,
+    "salary": "$1,341.30",
+    "client": "REALYSIS",
+    "details": "Quis fugiat culpa aliqua culpa sunt et. Ea duis voluptate elit anim eiusmod nostrud. Quis ullamco aute ad excepteur fugiat non mollit aute dolore. Pariatur id magna dolor commodo amet id culpa adipisicing ea. Nulla amet laborum ullamco anim nulla voluptate eiusmod. Anim amet eu deserunt labore ullamco.",
+    "registered": "Friday, April 24, 2015 5:45 AM"
+  },
+  {
+    "uid": "",
+    "employee": "",
+    "type": "",
     "isApproved": true,
-    "salary": "$3,268.03",
-    "client": "BIOLIVE",
-    "details": "Id labore excepteur officia sit nisi do eu tempor. Dolore eu mollit sint amet et aliquip. Voluptate adipisicing non non deserunt non commodo est non voluptate aliquip esse labore. Nulla laborum magna deserunt fugiat elit laboris exercitation tempor est incididunt reprehenderit voluptate culpa. Aliquip veniam adipisicing magna reprehenderit sit enim consectetur do.",
-    "registered": "Sunday, March 12, 2017 8:40 AM"
+    "salary": "$2,716.91",
+    "client": "HOTCAKES",
+    "details": "Cupidatat incididunt est exercitation nostrud Lorem do. Et officia excepteur adipisicing in aute eiusmod qui ullamco nostrud et cupidatat. Exercitation aute ullamco velit quis incididunt laboris aute nisi eu aute adipisicing. Duis Lorem et voluptate aliquip tempor fugiat aliqua proident sit. Cupidatat commodo velit nostrud elit elit. Exercitation ad irure aliqua dolore elit magna laboris occaecat non qui proident aute aliquip ut.",
+    "registered": "Thursday, October 8, 2015 2:37 AM"
+  },
+  {
+    "uid": "",
+    "employee": "",
+    "type": "",
+    "isApproved": false,
+    "salary": "$3,046.74",
+    "client": "ZENTHALL",
+    "details": "Culpa nostrud ullamco veniam Lorem qui dolor Lorem nisi proident magna. Ad cupidatat ex aliquip anim esse qui incididunt ea Lorem eu sunt. Laborum reprehenderit id tempor labore exercitation non labore enim est labore. Minim cupidatat ipsum esse nisi sit dolore duis est adipisicing et culpa. Ut minim officia ullamco esse nostrud cillum qui esse.",
+    "registered": "Thursday, December 10, 2015 3:48 PM"
+  },
+  {
+    "uid": "",
+    "employee": "",
+    "type": "",
+    "isApproved": true,
+    "salary": "$3,382.35",
+    "client": "COMTRACT",
+    "details": "Exercitation ipsum deserunt minim elit commodo veniam commodo Lorem excepteur reprehenderit eu enim ullamco dolor. Officia officia pariatur aute laborum exercitation velit voluptate est adipisicing non laboris ea Lorem. Quis irure ea quis proident ea.",
+    "registered": "Friday, February 6, 2015 6:26 AM"
   }
 ]

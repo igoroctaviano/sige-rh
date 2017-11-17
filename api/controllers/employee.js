@@ -35,10 +35,17 @@ function removeEmployee(req, res) {
   });
 }
 
+function allEmployeeTypes(req, res) {
+  db.all("employee/type", function(employeeTypes) {
+    res.json(employeeTypes);
+  });
+}
+
 module.exports = {
   getEmployee,
   allEmployees,
   saveEmployee,
   updateEmployee,
-  removeEmployee
+  removeEmployee,
+  allEmployeeTypes
 };

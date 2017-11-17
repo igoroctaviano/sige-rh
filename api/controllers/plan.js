@@ -35,10 +35,17 @@ function removePlan(req, res) {
   });
 }
 
+function allPlanTypes(req, res) {
+  db.all("plan/type", function(planTypes) {
+    res.json(planTypes);
+  });
+}
+
 module.exports = {
   getPlan,
   allPlans,
   savePlan,
   updatePlan,
-  removePlan
+  removePlan,
+  allPlanTypes
 };

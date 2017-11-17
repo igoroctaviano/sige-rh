@@ -1,0 +1,38 @@
+[
+  {
+    "uid": "",
+    "title": "Backend Developer .NET"
+  },
+  {
+    "uid": "",
+    "title": "Backend Developer Java"
+  },
+  {
+    "uid": "",
+    "title": "Backend Developer Ruby"
+  },
+  {
+    "uid": "",
+    "title": "UI Developer JavaScript"
+  },
+  {
+    "uid": "",
+    "title": "UI Developer React"
+	},
+	{
+    "uid": "",
+    "title": "UI Developer Angular"
+	},
+	{
+    "uid": "",
+    "title": "UI Developer Ember"
+	},
+	{
+    "uid": "",
+    "title": "DevOps Engineer"
+	},
+	{
+    "uid": "",
+    "title": "Quality Assurance Engineer"
+  }
+]

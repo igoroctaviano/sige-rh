@@ -2,19 +2,13 @@ swagger: "2.0"
 info:
   version: "0.0.1"
   title: Sistemas Integrados de Gestão Empresarial (API Recursos Humanos) 
-# during dev, should point to your local machine
-host: sige-rh.herokuapp.com # localhost:10010
-# basePath prefixes all resource paths 
+host: localhost:10010 # sige-rh.herokuapp.com
 basePath: /
-# 
 schemes:
-  # tip: remove http to make production-grade
-  # - http
+  - http
   - https
-# format of bodies a client can send (Content-Type)
 consumes:
   - application/json
-# format of the responses to the client (Accepts)
 produces:
   - application/json
 paths:
@@ -94,6 +88,22 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
+  /plan/type:
+    x-swagger-router-controller: plan
+    get:
+      tags:
+        - plans
+      description: Returns plan types to the caller
+      operationId: allPlanTypes
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/PlanTypesResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /approval/{uid}:
     x-swagger-router-controller: approval
     get:
@@ -154,108 +164,18 @@ paths:
           description: Error
           schema:
             $ref: "#/definitions/ErrorResponse"
-  /refresh:
-    x-swagger-router-controller: refresh
-    post:
-      tags:
-        - database
-      operationId: refresh
-      summary: Refresh all entities data.
-      consumes:
-        - application/json
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/SuccessRefreshResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
-  /refresh/{entity}:
-    x-swagger-router-controller: refresh
-    post:
-      tags:
-        - database
-      operationId: refreshEntity
-      summary: Refresh specific entity data.
-      consumes:
-        - application/json
-      parameters:
-        - in: path
-          name: entity          
-          type: string
-          required: true
-          description: The database entity to be refreshed.
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/SuccessRefreshResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
-  /reset:
-    x-swagger-router-controller: reset
-    post:
-      tags:
-        - database
-      operationId: reset
-      summary: Reset all entities data.
-      consumes:
-        - application/json
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/SuccessResetResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
-  /reset/{entity}:
-    x-swagger-router-controller: reset
-    post:
-      tags:
-        - database
-      operationId: resetEntity
-      summary: Reset specific entity data.
-      consumes:
-        - application/json
-      parameters:
-        - in: path
-          name: entity
-          type: string
-          required: true
-          description: The database entity to be reseted.
-      responses:
-        "200":
-          description: Success
-          schema:
-            $ref: "#/definitions/SuccessResetResponse"
-        default:
-          description: Error
-          schema:
-            $ref: "#/definitions/ErrorResponse"
-  /hello:
-    x-swagger-router-controller: hello_world
+  /employee/type:
+    x-swagger-router-controller: employee
     get:
       tags:
-        - tests
-      description: Returns 'Hello' to the caller
-      operationId: hello
-      parameters:
-        - in: query
-          name: name
-          description: The name of the person to whom to say hello
-          required: false
-          type: string
+        - employees
+      description: Returns employee types to the caller
+      operationId: allEmployeeTypes
       responses:
         "200":
           description: Success
           schema:
-            $ref: "#/definitions/HelloWorldResponse"
+            $ref: "#/definitions/EmployeeTypesResponse"
         default:
           description: Error
           schema:
@@ -273,6 +193,9 @@ definitions:
         uid:
           type: string
           description: The employee unique identifier.
+        type:
+          type: string
+          description: The employee type unique identifier.
         isAllocated:
           type: boolean
           description: The employee availability.
@@ -313,28 +236,15 @@ definitions:
         registered:
           type: string
           description: The date when employee was registered.
-        skills:
-          type: array
-          description: The employee skills.
-          items:
-            type: object
-            description: The employee skill.
-            properties:
-              id:
-                type: integer
-                description: The skill ID.
-              name:
-                type: string
-                description: The skill name.
-              level:
-                type: integer
-                description: The skill level.
   EmployeeResponse:
     description: The employee.
     properties:
       uid:
         type: string
         description: The employee unique identifier.
+      type:
+        type: string
+        description: The employee type unique identifier.
       isAllocated:
         type: boolean
         description: The employee availability.
@@ -375,22 +285,6 @@ definitions:
       registered:
         type: string
         description: The employee registration date.
-      skills:
-        type: array
-        description: The employee skills.
-        items:
-          type: object
-          description: The employee skill.
-          properties:
-            id:
-              type: integer
-              description: The skill ID.
-            name:
-              type: string
-              description: The skill name.
-            level:
-              type: integer
-              description: The skill level.
   PlansResponse:
     type: array
     description: The plans.  
@@ -428,7 +322,7 @@ definitions:
       employee:
         type: string
         description: The employee unique identifier.
-      contractType:
+      type:
         type: string
         description: The contract type unique identifier.
       uid:
@@ -449,6 +343,32 @@ definitions:
       registered:
         type: string
         description: The plan registration date.
+  PlanTypesResponse:
+    type: array
+    description: The plan types.  
+    items:
+      type: object
+      description: The plan type.
+      properties:
+        uid:
+          type: string
+          description: The plan type unique identifier.
+        title:
+          type: string
+          description: The plan type title.
+  EmployeeTypesResponse:
+    type: array
+    description: The employee types.  
+    items:
+      type: object
+      description: The employee type.
+      properties:
+        uid:
+          type: string
+          description: The employee type unique identifier.
+        title:
+          type: string
+          description: The employee type title.
   ApprovalsResponse:
     type: array
     description: The approvals.  
@@ -493,26 +413,6 @@ definitions:
       description:
         type: string
         description: The approval post success message.
-  SuccessRefreshResponse:
-    description: The database refresh response.
-    type: object
-    properties:
-      success:
-        type: integer
-        description: The database refresh post status.
-      description:
-        type: string
-        description: The database refresh post success message.
-  SuccessResetResponse:
-    description: The database reset response.
-    type: object
-    properties:
-      success:
-        type: integer
-        description: The database reset post status.
-      description:
-        type: string
-        description: The database reset post success message.
   PostApprovalResponse:
     type: object
     required:
@@ -532,15 +432,9 @@ definitions:
       approvalDate:
         type: string
         description: The approval date.
-  HelloWorldResponse:
-    required:
-      - message
-    properties:
-      message:
-        type: string
   ErrorResponse:
-    required:
-      - message
-    properties:
-      message:
-        type: string
+      required:
+        - message
+      properties:
+        message:
+          type: string
