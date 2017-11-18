@@ -12,6 +12,11 @@ var config = {
 
 SwaggerTools.initializeMiddleware(swaggerDoc, function(middleware) {
   app.use(middleware.swaggerUi());
+  app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
   app.get("/", function(req, res) {
     res.redirect("/docs");
   });
@@ -26,11 +31,7 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
   var port = process.env.PORT || 10010;
   app.listen(port);
 
-  if (swaggerExpress.runner.swagger.paths["/hello"]) {
-    console.log(
-      "try this:\ncurl http://127.0.0.1:" + port + "/hello?name=Igor"
-    );
-  }
+  console.log("App running on port " + port + "!");
 
   db.initialize(function() {
     console.log("Database initialized successfully!");

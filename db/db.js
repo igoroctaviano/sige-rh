@@ -126,8 +126,9 @@ function save(entityName, entity, callback) {
       var newEntity = ref;
       entity.uid = newEntity.key;
       newEntity.set(entity);
+      return entity;
     })
-    .then(callback);
+    .then(entity => callback(entity));
 }
 
 function update(entityName, entity, callback) {

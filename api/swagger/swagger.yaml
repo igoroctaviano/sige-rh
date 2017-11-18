@@ -2,16 +2,40 @@ swagger: "2.0"
 info:
   version: "0.0.1"
   title: Sistemas Integrados de Gestão Empresarial (API Recursos Humanos) 
-host: localhost:10010 # sige-rh.herokuapp.com
+host: sige-rh.herokuapp.com
 basePath: /
 schemes:
-  - http
+  # - http
   - https
 consumes:
   - application/json
 produces:
   - application/json
 paths:
+  /announcement:
+    x-swagger-router-controller: announcement
+    post:
+      tags:
+        - announcements
+      operationId: sendJobAnnouncement
+      summary: Creates a new announcement.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: announcement
+          description: The announcement to create.
+          schema:
+            $ref: "#/definitions/PostAnnouncementResponse"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/SuccessAnnouncementResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
   /employee/{uid}:
     x-swagger-router-controller: employee
     get:
@@ -154,7 +178,7 @@ paths:
           name: approval
           description: The approval to create.
           schema:
-            $ref: "#/definitions/PostApprovalResponse"
+            $ref: "#/definitions/PostApproval"
       responses:
         "200":
           description: Success
@@ -413,7 +437,7 @@ definitions:
       description:
         type: string
         description: The approval post success message.
-  PostApprovalResponse:
+  PostApproval:
     type: object
     required:
       - plan
@@ -432,6 +456,34 @@ definitions:
       approvalDate:
         type: string
         description: The approval date.
+  SuccessAnnouncementResponse:
+    description: The announcement post response.
+    type: object
+    properties:
+      success:
+        type: integer
+        description: The announcement post status.
+      description:
+        type: string
+        description: The announcement post success message.
+  PostAnnouncementResponse:
+    type: object
+    required:
+      - employeeTypes
+    properties:
+      employeeTypes:
+        type: array
+        description: The employee types.
+        items:
+          type: object
+          description: The employee type.
+          properties:
+            uid:
+              type: string
+              description: The employee type unique identifier.
+            title:
+              type: string
+              description: The employee type title.
   ErrorResponse:
       required:
         - message
