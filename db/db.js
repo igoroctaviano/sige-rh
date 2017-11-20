@@ -1,4 +1,5 @@
 var firebase = require("firebase-admin");
+const uuidv1 = require('uuid/v1'); 
 
 var serviceAccount = {
   type: "service_account",
@@ -47,7 +48,7 @@ function initialize(callback) {
         .push()
         .then(function(ref) {
           var newEmployee = ref;
-          employee.uid = newEmployee.key;
+          employee.uid = uuidv1();
           employee.type =
             employeeTypesData[
               Math.floor(Math.random() * employeeTypesData.length)
@@ -66,7 +67,7 @@ function initialize(callback) {
         .push()
         .then(function(ref) {
           var newPlan = ref;
-          plan.uid = newPlan.key;
+          plan.uid = uuidv1();
           plan.employee =
             employeeTypesData[
               Math.floor(Math.random() * employeeTypesData.length)
@@ -83,7 +84,7 @@ function initialize(callback) {
         .push()
         .then(function(ref) {
           var newApproval = ref;
-          approval.uid = newApproval.key;
+          approval.uid = uuidv1();
           approval.plan =
             plansData[Math.floor(Math.random() * plansData.length)].uid;
           newApproval.set(approval);
@@ -124,7 +125,7 @@ function save(entityName, entity, callback) {
     .push()
     .then(function(ref) {
       var newEntity = ref;
-      entity.uid = newEntity.key;
+      entity.uid = uuidv1();
       newEntity.set(entity);
       return entity;
     })

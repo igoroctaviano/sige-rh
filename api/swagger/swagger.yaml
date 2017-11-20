@@ -2,10 +2,10 @@ swagger: "2.0"
 info:
   version: "0.0.1"
   title: Sistemas Integrados de Gestão Empresarial (API Recursos Humanos) 
-host: localhost:10010 # sige-rh.herokuapp.com
+host: sige-rh.herokuapp.com # localhost:10010 ## 
 basePath: /
 schemes:
-  - http
+  # - http
   - https
 consumes:
   - application/json
