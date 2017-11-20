@@ -2,10 +2,10 @@ swagger: "2.0"
 info:
   version: "0.0.1"
   title: Sistemas Integrados de Gestão Empresarial (API Recursos Humanos) 
-host: sige-rh.herokuapp.com
+host: localhost:10010 # sige-rh.herokuapp.com
 basePath: /
 schemes:
-  # - http
+  - http
   - https
 consumes:
   - application/json
@@ -32,6 +32,30 @@ paths:
           description: Success
           schema:
             $ref: "#/definitions/SuccessAnnouncementResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+  /request:
+    x-swagger-router-controller: request
+    post:
+      tags:
+        - requests
+      operationId: employeesRequest
+      summary: Creates a new employees request.
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: request
+          description: The request to create.
+          schema:
+            $ref: "#/definitions/PostRequest"
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/SuccessRequestResponse"
         default:
           description: Error
           schema:
@@ -437,6 +461,34 @@ definitions:
       description:
         type: string
         description: The approval post success message.
+  PostRequest:
+    type: object
+    required:
+      - employeeTypes
+    properties:
+      employeeTypes:
+        type: array
+        description: The employee types.
+        items:
+          type: object
+          description: The employee type.
+          properties:
+            uid:
+              type: string
+              description: The employee type unique identifier.
+            title:
+              type: string
+              description: The employee type title.
+  SuccessRequestResponse:
+      description: The request post response.
+      type: object
+      properties:
+        success:
+          type: integer
+          description: The request post status.
+        description:
+          type: string
+          description: The request post success message.
   PostApproval:
     type: object
     required:
@@ -444,9 +496,6 @@ definitions:
       - isApproved
       - approvalDate
     properties:
-      uid:
-        type: string
-        description: The approval unique identifier.
       plan:
         type: string
         description: The plan unique identifier.
